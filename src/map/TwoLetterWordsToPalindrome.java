@@ -8,13 +8,11 @@ import java.util.Map;
 public class TwoLetterWordsToPalindrome {
     public int longestPalindrome(String[] words) {
         Map<String, Integer> freq = new HashMap<>();
-        // 俩字符相同的，单独统计一下
-        int[] sameCharFreq = new int[26];
         for (String w : words) {
             freq.put(w, freq.getOrDefault(w, 0) + 1);
-            if (w.charAt(0) == w.charAt(1))
-                sameCharFreq[w.charAt(0) - 'a']++;
         }
+        // 标记是否有单独的同字符单词
+        boolean flag = false;
         int ans = 0;
         // 一次选一对word
         for (Map.Entry<String, Integer> entry : freq.entrySet()) {
@@ -26,12 +24,12 @@ public class TwoLetterWordsToPalindrome {
             char c = key.charAt(0);
             // 字符相同的，扣减
             if (c == key.charAt(1)) {
-                int cnt;
-                if((cnt = sameCharFreq[c - 'a']) > 1) {
-                    sameCharFreq[c - 'a'] = ((cnt & 1) == 0) ? 0 : 1;
-                    freq.put(key, sameCharFreq[c - 'a']);
-                    ans += (cnt >> 1) << 2; // 例如，两个则ans加上4
+                if(f > 1) {
+                    freq.put(key, (f & 1) == 0 ? 0 : 1);
+                    ans += (f >> 1) << 2; // 例如，两个则ans加上4
                 }
+                if (freq.get(key) == 1)
+                    flag = true;
             } else {
                 String rKey = key.substring(1) + c;
                 if (freq.getOrDefault(rKey, 0) > 0) {
@@ -42,11 +40,12 @@ public class TwoLetterWordsToPalindrome {
                 }
             }
         }
-        // 成对的最多者
-        int maxCnt = 0;
-        for (int scf : sameCharFreq) {
-            maxCnt = Math.max(maxCnt, scf);
-        }
-        return ans + maxCnt * 2;
+        return ans + (flag ? 2 : 0);
+    }
+
+    public static void main(String[] args) {
+        final TwoLetterWordsToPalindrome tl = new TwoLetterWordsToPalindrome();
+        String[] ss = new String[] {"mm","mm","yb","bb"};
+        System.out.println(tl.longestPalindrome(ss));
     }
 }
