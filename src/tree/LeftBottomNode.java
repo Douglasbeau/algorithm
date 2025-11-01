@@ -1,13 +1,11 @@
 package tree;
 
-import com.sun.tools.javac.util.Assert;
-
 // find the most left bottom treeNode
 public class LeftBottomNode {
     public int findBottomLeftValue(TreeNode root) {
         int nodeDepth = findBLNode(root).val;
         int[] nodeDepth2 = findBLNode2(root);
-        Assert.check(nodeDepth == nodeDepth2[0]);
+        assert nodeDepth == nodeDepth2[0];
         return nodeDepth2[0];
     }
 

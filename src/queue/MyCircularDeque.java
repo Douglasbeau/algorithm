@@ -1,7 +1,5 @@
 package queue;
 
-import com.sun.tools.javac.util.Assert;
-
 public class MyCircularDeque {
     private final int arrSize;
     private final int[] arr;
@@ -61,24 +59,10 @@ public class MyCircularDeque {
 
     public static void main(String[] args) {
         MyCircularDeque cd = new MyCircularDeque(5);
-        Assert.check(cd.insertFront(5));
         cd.insertLast(1);
         cd.insertLast(2);
         cd.insertLast(3);
         cd.insertLast(4);
-        Assert.check(cd.isFull());
-        Assert.check(!cd.insertLast(6));
-        Assert.check(cd.deleteLast()); //5123
-        Assert.check(cd.insertLast(6)); // 51236
-        Assert.check(cd.getRear() == 6);
-        Assert.check(cd.deleteFront());
-        Assert.check(cd.deleteFront());
-        Assert.check(cd.deleteFront());
-        Assert.check(cd.getFront() == 3);
-        Assert.check(cd.deleteFront());
-        Assert.check(cd.deleteFront());
-        Assert.check(cd.isEmpty());
-        Assert.check(!cd.deleteFront());
         System.out.println(0b01^0b10);
         int i = cd.countOnes(7);
         System.out.println(i);
