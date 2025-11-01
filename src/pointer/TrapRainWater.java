@@ -47,4 +47,8 @@ public class TrapRainWater {
 
     //     return ans;
     // }
+    public static void main(String[] args) {
+        TrapRainWater trapRainWater = new TrapRainWater();
+        System.out.println(trapRainWater.trap(new int[]{2,1,0,2,3,1,0,2}));
+    }
 }
