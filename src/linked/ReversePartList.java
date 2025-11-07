@@ -1,6 +1,6 @@
 package linked;
 
-// LC 92 反转指定范围的链表
+import common.ListNode;// LC 92 反转指定范围的链表
 public class ReversePartList {
     public ListNode reverseBetween(ListNode head, int left, int right) {
         if (left == right)

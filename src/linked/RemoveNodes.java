@@ -1,6 +1,6 @@
 package linked;
 
-// LC 3217 删除所有val在nums中的节点
+import common.ListNode;// LC 3217 删除所有val在nums中的节点
 public class RemoveNodes {
     public ListNode modifiedList(int[] nums, ListNode head) {
         int[] exist = new int[3200]; // 32bit * 3200 够 10^5

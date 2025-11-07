@@ -1,6 +1,6 @@
 package linked;
 
-public class Dedup {
+import common.ListNode;public class Dedup {
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null)
             return head;

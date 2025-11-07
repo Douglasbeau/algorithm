@@ -1,5 +1,6 @@
 package tree;
 
+import common.TreeNode;
 public class WrongSearchTree {
     TreeNode[] nodes = new TreeNode[4];
     int p = 0;

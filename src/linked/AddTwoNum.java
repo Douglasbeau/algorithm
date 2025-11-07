@@ -1,13 +1,6 @@
 package linked;
 
-
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
+import common.ListNode;
 // 两数以链表形式相加
 public class AddTwoNum {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

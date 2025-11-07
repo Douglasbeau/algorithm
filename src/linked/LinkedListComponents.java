@@ -1,6 +1,6 @@
 package linked;
 
-// LC 817 链表组件个数
+import common.ListNode;// LC 817 链表组件个数
 public class LinkedListComponents {
     public int numComponents(ListNode head, int[] nums) {
         int[] pos = new int[10001];

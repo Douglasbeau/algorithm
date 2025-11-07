@@ -1,5 +1,6 @@
 package tree;
 
+import common.TreeNode;
 // find the most left bottom treeNode
 public class LeftBottomNode {
     public int findBottomLeftValue(TreeNode root) {
@@ -72,18 +73,7 @@ public class LeftBottomNode {
         System.out.println("got bottom left val : " + bottomLeftValue);
     }
 }
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
+
 class Info {
     int val;
     int depth;

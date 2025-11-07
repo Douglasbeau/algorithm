@@ -1,6 +1,6 @@
 package linked;
 
-// LC 82 删除所有重复值
+import common.ListNode;// LC 82 删除所有重复值
 public class Dedup2 {
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null)

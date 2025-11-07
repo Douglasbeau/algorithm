@@ -1,5 +1,6 @@
 package tree;
 
+import common.TreeNode;
 import java.util.LinkedList;
 
 // 添加一行到tree指定行

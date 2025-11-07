@@ -1,5 +1,6 @@
 package tree;
 
+import common.TreeNode;
 // TODO 判断二叉树是否平衡
 public class IsBT {
     private static class Info{

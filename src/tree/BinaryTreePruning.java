@@ -1,6 +1,6 @@
 package tree;
 
-// 剪掉值为零 的所有叶子
+import common.TreeNode;// 剪掉值为零 的所有叶子
 public class BinaryTreePruning {
     public TreeNode pruneTree(TreeNode root) {
         return afterPrune(root);

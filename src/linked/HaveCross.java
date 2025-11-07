@@ -1,10 +1,10 @@
 package linked;
 
+import common.ListNode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.StreamSupport;
 
 // TODO 两个链表，只知道俩头节点，怎么判断是否相交？是则返回交点
 // 首先判断每个个有无环，其次俩判断相交

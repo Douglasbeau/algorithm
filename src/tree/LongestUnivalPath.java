@@ -1,5 +1,6 @@
 package tree;
 
+import common.TreeNode;
 // 最长路径
 public class LongestUnivalPath {
     int max = 0;

@@ -1,6 +1,6 @@
 package linked;
 
-public class KGroupReverse {
+import common.ListNode;public class KGroupReverse {
     public ListNode reverseKGroup(ListNode head, int k) {
         if(k == 1 || head.next == null)
             return head;
