@@ -3,7 +3,7 @@ package tree;
 import common.TreeNode;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Objects;
 
 // LC 101 对称二叉树
 public class SymmetryBT {
@@ -48,7 +48,7 @@ public class SymmetryBT {
             size--;
             if (size == 0) {
                 for (int i = 0; i < level.size() >> 1; i++) {
-                    if (level.get(i) != level.get(level.size() - 1 - i))
+                    if (!Objects.equals(level.get(i), level.get(level.size() - 1 - i)))
                         return false;
                 }
                 size = q.size();
