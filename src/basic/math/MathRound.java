@@ -1,4 +1,4 @@
-package basic;
+package basic.math;
 
 public class MathRound {
     public static void main(String[] args) {
