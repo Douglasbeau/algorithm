@@ -7,8 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ThreadPoolDemo {
     final static AtomicInteger a = new AtomicInteger(1);
-    @SneakyThrows
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         ThreadPoolExecutor executorService = new ThreadPoolExecutor(2, 2, 2l, TimeUnit.SECONDS,
                 new LinkedBlockingQueue<>(3), r -> new Thread(r, "t" + a.getAndIncrement()));
         final CountDownLatch countDownLatch = new CountDownLatch(1);
