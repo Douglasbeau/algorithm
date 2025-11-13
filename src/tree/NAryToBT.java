@@ -5,7 +5,7 @@ import common.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-// LC 431 多叉树<->二叉树 互相转化
+// LC 431 会员题 多叉树<->二叉树 互相转化
 public class NAryToBT {
     // Definition for a Node.
     class Node {

@@ -3,6 +3,7 @@ package tree;
 import java.util.ArrayList;
 import java.util.List;
 
+// LC 428 会员题
 public class SerDeSerNAry {
     // Encodes a tree to a single string.
     public String serialize(Node root) {

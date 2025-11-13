@@ -2,7 +2,7 @@ package divide_conquer;
 
 import java.util.Arrays;
 
-// LC 259 三数之和（i，j，k不同位置）<target，求三数位置有多少种可能
+// LC 259 会员题 三数之和（i，j，k不同位置）<target，求三数位置有多少种可能
 // 法一、利用单调性二分，并且设置flag避免冗余检查（如果选了第一个数，但没有任何结果，则整体结束；如果选了第二个数没有结果，则更新第一个数）
 public class ThreeSumSmaller {
     // 法二、选一个数，双指针选另外俩，k满足条件，则k左边至j+1都可以作为第三个数
