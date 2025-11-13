@@ -65,4 +65,11 @@ public class ThreeSumSmaller {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 4, 5, 9, 8, 10, 4};
+        ThreeSumSmaller threeSumSmaller = new ThreeSumSmaller();
+        System.out.println(threeSumSmaller.threeSumSmaller2(nums, 11));
+        System.out.println(threeSumSmaller.threeSumSmaller(nums, 11));
+    }
 }
