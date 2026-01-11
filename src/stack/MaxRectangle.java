@@ -1,5 +1,6 @@
 package stack;
 
+// LC 84 柱状图的最大矩形面积
 public class MaxRectangle {
     private int maxArea(int[] h) {
         int n = h.length;
